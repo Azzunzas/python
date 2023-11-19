@@ -1,0 +1,58 @@
+{% extends "perry.html" %}
+
+{% block titulo %} Perfil do {{ user.username }} {% endblock %}
+
+{% block style %}
+<link rel="stylesheet" href="../static/css/perfil.css"> {% endblock %}
+
+{% block body %}
+
+<div class="saudacoes">
+    <h1> BEM VINDO {{ user.username }}! </h1>
+    <div>
+        <a href=" {{ url_for('homepage') }} " class="casa"> <b> HOME </b></a>
+    </div>
+</div>
+
+{% if form %}
+<h2> MEU PERFIL: </h2>
+
+<form method="POST" enctype="multipart/form-data">
+    {{ form.csrf_token }}
+
+    {{ form.text.label(class="texto") }}
+    {{ form.text(class="caixa") }}
+
+    {{ form.photo.label() }}
+    {{ form.photo() }}
+
+    {{ form.btn() }}
+</form>
+
+{% endif %}
+
+
+<div class="posts">
+    {% for post in user.posts %}
+    <!-- <img src="{{ url_for('static', filename='fotos_dos_posts/default.jpg') }}"> -->
+
+    <h2>{{post.post_text}}</h2>
+    <img src="{{ url_for('static', filename='fotos_dos_posts/{}'.format(post.post_img)) }}">
+    <p class="likes_quant">likes: {{ contador }}</p>
+
+    <div>
+        <form method="post" action="{{ url_for('like') }}">
+            <button type="submit" class="like"></button>
+        </form>
+
+        {% if post.user_id == current_user.id %}
+        <form method="post" action="{{ url_for('delete_post', post_id=post.id) }}">
+            <button type="submit" class="deletar"></button>
+        </form>
+        {% endif %}
+    </div>
+
+    {% endfor %}
+</div>
+
+{% endblock %}

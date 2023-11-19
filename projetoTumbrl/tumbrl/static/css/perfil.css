@@ -1,0 +1,109 @@
+body {
+    background-color:#c4c4c4;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+.saudacoes{
+    /* text-align: center; */
+    width: 30%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgba(130, 59, 224, 0.725);
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
+}
+.casa{
+    /* text-align: center; */
+    /* width: 30%; */
+    padding: 10px 20px;
+    background-color: rgb(147, 147, 185);
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
+
+}
+
+h2 {
+    color: #333;
+    text-align: center;
+}
+ form{
+    /* text-align: center; */
+    padding: 10px;
+    font-weight: bold;
+ }
+ .postagem
+ {  
+    /* /* height: 80%; */
+    width: 90%;
+    /* text-align: center; */
+    margin: 0;
+    background-color: rgb(133, 123, 123);
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgba(130, 59, 224, 0.725);
+    border-radius: 10px;
+ }
+ p{
+    font-weight: bold;
+
+ }
+
+
+ .posts
+{
+    background-color: rgba(130, 59, 224, 0.725);
+    border-radius: 20px;
+    padding: 20px 0px;
+    margin: 0px 30px;
+}
+
+.like
+{
+    border: 0px;
+    border-radius: 10px;
+    color: white;
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.725);
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.2);
+    background-image: url(../fotos_dos_posts/like.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.like:hover
+{
+    background-color: rgb(62, 62, 197);
+}
+
+.likes_quant
+{
+    border: solid 1px rgb(189, 70, 236);
+    border-radius: 10px;
+    margin-left: 45%;
+    padding: 5px 0px;
+    font-weight: bold;
+    width: 10%;
+}
+
+.user
+{
+    text-decoration: underline;
+}
+
+.deletar
+{
+    border: 0px;
+    border-radius: 10px;
+    color: white;
+    padding: 30px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.2);
+    background-image: url(../fotos_dos_posts/lixo.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.deletar:hover
+{
+    background-color: rgb(212, 11, 11);
+}

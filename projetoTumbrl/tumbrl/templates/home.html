@@ -1,0 +1,32 @@
+{% extends "perry.html" %}
+
+{% block titulo %} HOMMER {% endblock %}
+
+
+{% block body %}
+
+{% block formulario %}
+<main>
+    <form method="POST">
+        {{ form.csrf_token }}
+
+        {{ form.email.label() }}
+        {{ form.email() }}
+
+        {{ form.password.label() }}
+        {{ form.password() }}
+        <div class="botoes">
+            {{ form.btn(class="button") }}
+        </div>
+    </form>
+</main>
+{% endblock %}
+
+
+
+
+<a href="{{ url_for('createAccount') }}" id="cadastro">
+    <h2>Não possui uma conta? Registre-se aqui!</h2>
+</a>
+
+{% endblock %}
